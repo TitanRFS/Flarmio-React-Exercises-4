@@ -23,8 +23,53 @@ function App() {
           className="my-2"
         />
       )}
-      <Tip hasMessage text="2" onClick={() => console.log("Tip clicked!")} />
-      <ServiceRequest />
+      <Tip
+        showBriefcase
+        showMail
+        text="2"
+        onClick={() => console.log("Mail and Text clicked!")}
+      />{" "}
+      <div>
+        <ServiceRequest
+          arrival="25 Mar"
+          departure="31 Mar"
+          equipments="Underwater Hull and Appendices"
+          shipName="Hope"
+          port="Piraeus"
+          status="Offers Received"
+          uniqueId="HO-22-2"
+          showMailTip={true}
+          showTextTip={true}
+          tipText="2"
+          onClick={() => console.log("Service 1 clicked!")}
+        />
+
+        <ServiceRequest
+          arrival="18 Feb"
+          departure="25 Feb"
+          equipments="Pressure & Temperature Calibrators"
+          shipName="Hope"
+          port="Los Angeles"
+          status="No Offers"
+          uniqueId="HO-22-1"
+          showBriefcaseTip={true}
+          onClick={() => console.log("Service 2 clicked!")}
+        />
+
+        <ServiceRequest
+          arrival="29 Jan"
+          departure="1 Feb"
+          equipments="Bow Thruster"
+          shipName="SeaLion"
+          port="New York & New Jersey"
+          status="Completed"
+          uniqueId="SE-22-2"
+          showMailTip={true}
+          showTextTip={true}
+          tipText="1"
+          onClick={() => console.log("Service 3 clicked!")}
+        />
+      </div>
     </>
   );
 }
