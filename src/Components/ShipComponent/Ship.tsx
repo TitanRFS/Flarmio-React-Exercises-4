@@ -42,7 +42,6 @@ export const Ship: React.FC<ShipProps> = ({ onDataLoaded }) => {
       const { data } = await response.json();
       if (data && data.get) {
         setShips(data.get);
-        // Notify parent component that ships have loaded
         if (onDataLoaded) {
           onDataLoaded();
         }
